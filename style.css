@@ -1,0 +1,4 @@
+/* Hide all instances of 'nikkuu_u' */
+*:contains("nikkuu_u") {
+  display: none;
+}
