@@ -1,17 +1,14 @@
 {
+  "name": "replaceWords Extension",
+  "version": "0.0.1",
+  "description": "Replace words across the web",
   "manifest_version": 3,
-  "name": "Remove Username",
-  "version": "1.0",
-  "description": "Removes all instances of 'nikkuu_u' (case-insensitive) from webpages.",
-  "permissions": ["activeTab", "scripting"],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ],
-  "action": {
-    "default_title": "Remove Username"
+  "background":{
+    "service_worker": "serviceWorker.js"
+  },
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["scripting", "storage"],
+  "options_ui":{
+    "page": "opt.html"
   }
 }
-
